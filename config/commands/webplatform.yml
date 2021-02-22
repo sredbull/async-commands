@@ -1,0 +1,13 @@
+parameters:
+  update:
+    path: /var/www
+    excluded_paths:
+      - src
+      - vendor
+      - var
+      - config
+      - bin
+      - tests
+      - assets
+      - library
+      - templates

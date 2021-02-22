@@ -1,0 +1,3 @@
+parameters:
+  webplatform:docker:build:
+    docker-compose-file: /var/www/web/webplatform-deploy/docker-compose.yml

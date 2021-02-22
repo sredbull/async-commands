@@ -1,0 +1,13 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: services.yml }
+    - { resource: commands/* }
+
+services:
+    app:
+        public: true
+        class: App\Application
+        arguments: [ '@service_container', '%app.name%', '%app.version%' ]
+        calls:
+            - [ setCatchExceptions, [ true ] ]
+            - [ addIterableCommands, [ !tagged_iterator app.command ] ]

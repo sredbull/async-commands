@@ -1,0 +1,15 @@
+services:
+  _instanceof:
+    App\Command\Command:
+      tags: ['app.command']
+
+  App\Command\:
+    resource: '../src/Command/*'
+
+  Symfony\Component\VarDumper\Server\DumpServer:
+    arguments:
+      $host: 127.0.0.1:9912
+  Symfony\Component\VarDumper\Command\ServerDumpCommand:
+    arguments:
+      $server: '@Symfony\Component\VarDumper\Server\DumpServer'
+    tags: ['app.command']

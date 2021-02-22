@@ -1,0 +1,5 @@
+parameters:
+  add:user-to-group:
+    # user, group
+    user-groups:
+      - ['%env(SUDO_USER)%', docker]

@@ -1,0 +1,7 @@
+parameters:
+  configure:sysctl:
+    configFile: /etc/sysctl.conf
+    attributes:
+      - { attribute: vm.max_map_count, value: '262144' }
+      - { attribute: vm.max_map_count1, value: '1' }
+      - { attribute: vm.max_map_count2, value: '3' }

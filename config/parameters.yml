@@ -1,0 +1,4 @@
+parameters:
+    app.name: 'Async system installer / updater'
+    app.version: '0.1'
+    container.cache: false

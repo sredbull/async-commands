@@ -1,0 +1,36 @@
+parameters:
+  install:apt:
+    keys:
+      docker: https://download.docker.com/linux/ubuntu/gpg
+    repos:
+      docker: deb [arch=amd64] https://download.docker.com/linux/ubuntu $ubuntuCodename stable
+    install:
+      - apt-transport-https
+      - ca-certificates
+      - software-properties-common
+      - curl
+      - dconf-cli
+      - docker-ce
+      - docker-compose
+      - gedit
+      - git
+      - git-gui
+      - openjdk-8-jre
+      - openjdk-8-jdk
+      - myrepos
+      - mysql-client
+      - nagstamon
+      - python-setuptools
+      - pv
+      - libnss3-tools
+      - openssh-client
+      - openssh-server
+      - vim-athena
+      - virtualbox
+      - virtualbox-qt
+      - openconnect
+      - network-manager-openconnect-gnome
+      - software-properties-common
+    remove:
+      - cowsay
+      - python-pip
